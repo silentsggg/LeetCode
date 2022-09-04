@@ -41,7 +41,23 @@ class Solution:
     #         curr = next # 当前curr结点指向下一结点
 
     #     return prev
+    
+    # # 递归
+    # # 一次递归调用进行一次小范围反转，反转操作为：当前结点currnode.next.next = currnode,这个操作将当前结点currnode的下一个结点的下一个结点指向当前结点currnode，完成反转
+    # # 完成小范围反转后，当前结点的下一个结点要指向None，否则会出现环
+    # # 出递归的条件是，当前结点的下一结点指向None，返回当前结点的下一结点
+    # def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    #     # 基线条件、出递归条件
+    #     # 这里判断head为None以及出递归条件
+    #     if not head or not head.next:
+    #         return head
 
+    #     # 返回反转后的头结点
+    #     newhead = self.reverseList(head.next)
+    #     head.next.next = head
+    #     head.next = None
+
+    #     return newhead
 
 if __name__ == '__main__':
     node5 = ListNode(5)
